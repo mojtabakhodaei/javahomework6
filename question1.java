@@ -36,13 +36,13 @@ public class question1 {
 
     protected static void removeInappropriateCouples(ArrayList<Integer> numbers) {
         int counter = 0;
-        do {
+        while (counter < numbers.size() - 1) {
             if (numbers.get(counter) > numbers.get(counter + 1)) {
                 numbers.remove(counter);
                 numbers.remove(counter);
             } else
                 counter += 2;
-        } while (counter < numbers.size() - 1);
+        }
     }
 
     protected static void printNumbersArray(ArrayList<Integer> numbers) {

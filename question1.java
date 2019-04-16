@@ -46,8 +46,13 @@ public class question1 {
     }
 
     protected static void printNumbersArray(ArrayList<Integer> numbers) {
-        System.out.println("new Arraylist is:");
-        for (int number : numbers)
-            System.out.print(number + "\t");
+
+        if (numbers.size() == 0)
+            System.out.println("\nArrayList is empty!");
+        else {
+            System.out.println("\nnew Arraylist is:");
+            for (int number : numbers)
+                System.out.print(number + "\t");
+        }
     }
 }

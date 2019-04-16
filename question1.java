@@ -12,10 +12,9 @@ public class question1 {
         if (numbers.size() % 2 != 0)
             numbers.remove(numbers.size() - 1);
 
-        for (int number : numbers)
-            System.out.print(number + "\t");
-
         removeInappropriateCouples(numbers);
+
+        printNumbersArray(numbers);
     }
 
     protected static void takeNumber(ArrayList<Integer> numbers) {
@@ -46,4 +45,9 @@ public class question1 {
         } while (counter < numbers.size() - 1);
     }
 
+    protected static void printNumbersArray(ArrayList<Integer> numbers) {
+        System.out.println("new Arraylist is:");
+        for (int number : numbers)
+            System.out.print(number + "\t");
+    }
 }

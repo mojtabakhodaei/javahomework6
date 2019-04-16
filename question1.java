@@ -1,0 +1,32 @@
+package javahomework6;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class question1 {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList();
+
+        takeNumber(numbers);
+        
+        for (int number : numbers)
+            System.out.print(number + "\t");
+
+    }
+
+    protected static void takeNumber(ArrayList<Integer> numbers) {
+        Scanner scanner = new Scanner(System.in);
+
+        Boolean bool = true;
+        int num;
+        do {
+            System.out.println("Enter your numbers: ");
+            num = scanner.nextInt();
+            if (num != -1000)
+                numbers.add(num);
+            else
+                bool = false;
+
+        } while (bool);
+    }
+}

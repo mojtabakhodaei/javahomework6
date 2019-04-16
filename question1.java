@@ -8,7 +8,10 @@ public class question1 {
         ArrayList<Integer> numbers = new ArrayList();
 
         takeNumber(numbers);
-        
+
+        if (numbers.size() % 2 != 0)
+            numbers.remove(numbers.size() - 1);
+
         for (int number : numbers)
             System.out.print(number + "\t");
 

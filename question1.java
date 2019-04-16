@@ -15,6 +15,7 @@ public class question1 {
         for (int number : numbers)
             System.out.print(number + "\t");
 
+        removeInappropriateCouples(numbers);
     }
 
     protected static void takeNumber(ArrayList<Integer> numbers) {
@@ -32,4 +33,17 @@ public class question1 {
 
         } while (bool);
     }
+
+
+    protected static void removeInappropriateCouples(ArrayList<Integer> numbers) {
+        int counter = 0;
+        do {
+            if (numbers.get(counter) > numbers.get(counter + 1)) {
+                numbers.remove(counter);
+                numbers.remove(counter);
+            } else
+                counter += 2;
+        } while (counter < numbers.size() - 1);
+    }
+
 }
